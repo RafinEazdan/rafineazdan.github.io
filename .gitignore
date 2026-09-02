@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# LaTeX build artefacts, if the CV is ever compiled inside this repo
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+.nojekyll
