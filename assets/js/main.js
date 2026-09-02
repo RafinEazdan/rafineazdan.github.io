@@ -96,13 +96,6 @@
       '<a class="btn btn-outline" href="mailto:' + m.email + '">' + svg('mail', 15) + 'Email me</a>' +
       (gh ? '<a class="btn btn-ghost" href="' + gh.href + '" target="_blank" rel="noopener">' + svg('github', 15) + 'GitHub</a>' : '');
     setHTML('#heroActions', actions);
-
-    setHTML('#statGrid', D.stats.map(function (s) {
-      return '<div class="stat">' +
-               '<div class="stat-value">' + s.value + (s.unit ? ' <span class="unit">' + s.unit + '</span>' : '') + '</div>' +
-               '<div class="stat-label">' + s.label + '</div>' +
-             '</div>';
-    }).join(''));
   }
 
   /* ------------------------------------------------------------ about -- */
@@ -111,13 +104,7 @@
     var a = D.about;
     setHTML('#aboutLede', a.lede.map(function (p) { return '<p>' + p + '</p>'; }).join(''));
 
-    setHTML('#lookingForCard',
-      '<p class="card-label">' + a.lookingFor.title + '</p>' +
-      '<ul class="looking-list">' +
-        a.lookingFor.items.map(function (i) { return '<li>' + i + '</li>'; }).join('') +
-      '</ul>' +
-      '<p class="looking-note">' + a.lookingFor.note + '</p>'
-    );
+    setHTML('#lookingForCard', '<p class="looking-note">' + a.lookingFor.note + '</p>');
   }
 
   /* --------------------------------------------------------- research -- */
@@ -131,7 +118,11 @@
                '<p>' + r.body + '</p>' +
              '</article>';
     }).join(''));
+  }
 
+  /* ---------------------------------------------------------- skills -- */
+
+  function renderSkills() {
     setHTML('#skillsGroups', D.skills.map(function (g) {
       return '<div class="skill-group"><h4>' + g.group + '</h4>' + tags(g.items) + '</div>';
     }).join(''));
@@ -189,25 +180,6 @@
       '</div>';
 
     setHTML('#thesisCard', head + body + limits + foot);
-
-    setHTML('#pipelineNote', D.pipelineNote);
-
-    setHTML('#pipelineList', D.pipeline.map(function (p) {
-      return '<article class="pipeline-item" data-status="' + p.status + '">' +
-               '<span class="pipeline-marker" aria-hidden="true"></span>' +
-               '<div>' +
-                 '<p class="pipeline-status">' + p.statusLabel + '</p>' +
-                 '<h4>' + p.title + '</h4>' +
-                 '<p class="pipeline-role">' + p.role + '</p>' +
-                 '<p class="pipeline-body">' + p.body + '</p>' +
-                 '<div class="pipeline-foot">' +
-                   tags(p.tags) +
-                   (p.href ? '<a class="pipeline-link" href="' + p.href + '" target="_blank" rel="noopener">' +
-                             svg('link', 12) + 'Code</a>' : '') +
-                 '</div>' +
-               '</div>' +
-             '</article>';
-    }).join(''));
   }
 
   /* ---------------------------------------------------------- journey -- */
@@ -238,13 +210,6 @@
                          svg('github', 12) + 'Repository</a>' : '') +
              '</div>';
     }).join(''));
-
-    var t = D.teaching;
-    setHTML('#teachingCard',
-      '<p>' + t.intro + '</p>' +
-      '<div><h4 class="card-label">Courses I am prepared to teach</h4>' + tags(t.courses) + '</div>' +
-      '<p class="teaching-sup">' + t.supervision + '</p>'
-    );
   }
 
   /* --------------------------------------------------------- projects -- */
@@ -272,6 +237,23 @@
                  p.links.map(function (l) {
                    return '<a href="' + l.href + '"' + ext(l.href) + '>' + svg('link', 12) + l.label + '</a>';
                  }).join('') +
+               '</div>' +
+             '</article>';
+    }).join(''));
+
+    setHTML('#pipelineList', D.pipeline.map(function (p) {
+      return '<article class="pipeline-item" data-status="' + p.status + '">' +
+               '<span class="pipeline-marker" aria-hidden="true"></span>' +
+               '<div>' +
+                 '<p class="pipeline-status">' + p.statusLabel + '</p>' +
+                 '<h4>' + p.title + '</h4>' +
+                 '<p class="pipeline-role">' + p.role + '</p>' +
+                 '<p class="pipeline-body">' + p.body + '</p>' +
+                 '<div class="pipeline-foot">' +
+                   tags(p.tags) +
+                   (p.href ? '<a class="pipeline-link" href="' + p.href + '" target="_blank" rel="noopener">' +
+                             svg('link', 12) + 'Code</a>' : '') +
+                 '</div>' +
                '</div>' +
              '</article>';
     }).join(''));
@@ -554,6 +536,7 @@
   renderThesis();
   renderJourney();
   renderProjects();
+  renderSkills();
   renderAchievements();
   renderGallery();
   renderNews();

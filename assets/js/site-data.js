@@ -19,7 +19,7 @@ window.SITE_DATA = {
     role: "B.Sc. in Computer Science &amp; Engineering — Rajshahi University of Engineering &amp; Technology",
     status: "Applying to PhD programs · Fall 2027 intake",
     tagline:
-      "Recent CSE gradute working at the intersection of deep learning theory and the systems that make it run efficiently and reliably in the real world.",
+      "CSE graduate working at the intersection of deep learning theory and the constraints - compute, privacy, bandwidth - that decide whether it actually works in the real world. ",
     location: "Dhaka, Bangladesh",
     email: "eazdan.rafin@gmail.com",
     cvPath: "assets/cv/Eazdan_Mostafa_Rafin_CV.pdf",
@@ -35,25 +35,13 @@ window.SITE_DATA = {
     { label: "Email",    href: "mailto:eazdan.rafin@gmail.com",                      icon: "mail" }
   ],
 
-  /* ------------------------------------------------------- hero snapshot -- */
-  stats: [
-    { value: "0.8819", unit: "Dice",   label: "Federated thesis, held-out BraTS 2023" },
-    { value: "91.6%",  unit: "smaller", label: "Parameter cut at no accuracy cost" },
-    { value: "3.55",   unit: "/ 4.00", label: "CGPA · 3.73 final four semesters" },
-    { value: "Top 13%", unit: "",      label: "Kaggle, 4,329 teams" }
-  ],
-
   /* --------------------------------------------------------------- about -- */
   about: {
     lede: [
       "I'm a Computer Science and Engineering graduate from Rajshahi University of Engineering and Technology (RUET), Bangladesh. My research focuses on deep learning for medical image analysis and federated learning, with a growing interest in Vision-Language Models and NLP for low-resource languages."
     ],
     lookingFor: {
-      title: "What I am looking for",
-      items: [
-        "A PhD position starting Fall 2027 in Machine Learning, Deep Learning, Computer Vision, Federated Learning, or Medical Image Analysis.",
-        "An advisor working on federated or privacy-preserving learning, medical imaging, or efficient deep architectures."
-      ]
+      note: "If you supervise work in federated learning, medical image analysis, computer vision, or efficient deep architectures, and you think there might be a fit, kindly send me a message."
     }
   },
 
@@ -368,22 +356,6 @@ window.SITE_DATA = {
       date: "2026"
     }
   ],
-
-  /* ------------------------------------------------------------ teaching -- */
-  teaching: {
-    intro: "I have wanted to teach for as long as I have wanted to research, and I see the two as the same activity aimed at different audiences.",
-    courses: [
-      "Programming Fundamentals (C / C++ / Python)",
-      "Data Structures &amp; Algorithms",
-      "Algorithm Design &amp; Analysis",
-      "Database Systems",
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Digital Image Processing",
-      "Software Engineering",
-      "Associated laboratory courses"
-    ]
-  },
 
   /* ---------------------------------------------------------------- news -- */
   news: [

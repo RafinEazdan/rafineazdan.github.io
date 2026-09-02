@@ -82,17 +82,15 @@ What each key controls:
 | --- | --- |
 | `meta` | Name, role line, status badge, hero tagline, email, CV path |
 | `links` | GitHub / LinkedIn / Kaggle / email links |
-| `stats` | The four-box snapshot under the hero |
-| `about` | The "Why I want to do this" narrative, the "What I am looking for" card, the supervisor card |
+| `about` | The "Objective" narrative and the looking-for-a-supervisor card |
 | `researchInterests` | The six interest cards (`primary: true` marks one "Core") |
 | `thesis` | The featured thesis card — heading, summary, the four prose blocks, method tags |
-| `pipelineNote`, `pipeline` | "Where my research stands" — the honest research-status list |
 | `education`, `experience` | The two timelines under Journey |
-| `coursework`, `skills`, `languages` | Coursework, skill groups, language list |
 | `projects`, `projectFilters` | Project cards and their filter chips |
+| `pipeline` | "Where my research stands" — the honest research-status list, under Projects |
+| `coursework`, `skills`, `languages` | Coursework, skill groups, language list — under Technical skills |
 | `achievements` | Competitions and awards |
 | `certifications` | Certificate cards (click a thumbnail to enlarge) |
-| `teaching` | Teaching interests card |
 | `news` | The dated "News & updates" list |
 | `references` | The two referee cards in the footer |
 
