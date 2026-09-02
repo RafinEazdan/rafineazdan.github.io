@@ -184,11 +184,11 @@ window.SITE_DATA = {
     },
     {
       group: "ML / DL",
-      items: ["PyTorch", "scikit-learn", "Hugging Face Transformers", "LightGBM", "XGBoost", "CatBoost", "NumPy", "Pandas", "Matplotlib", "OpenCV"]
+      items: ["PyTorch", "scikit-learn", "Hugging Face Transformers", "LightGBM / XGBoost / CatBoost", "NumPy / Pandas", "OpenCV"]
     },
     {
       group: "Deep learning methods",
-      items: ["CNNs", "U-Net / DenseNet", "Attention mechanisms", "Semantic &amp; medical segmentation", "Image classification", "Vision-language models", "Federated learning", "PEFT / LoRA / QLoRA", "Unsloth"]
+      items: ["Attention mechanisms", "Semantic &amp; medical segmentation", "Vision-language models", "Federated learning", "PEFT / LoRA / QLoRA"]
     },
     {
       group: "LLM &amp; RAG",
@@ -196,11 +196,11 @@ window.SITE_DATA = {
     },
     {
       group: "Backend &amp; data",
-      items: ["FastAPI", "REST APIs", "SQLAlchemy", "Alembic", "PostgreSQL", "MySQL", "MongoDB", "Redis"]
+      items: ["FastAPI", "SQLAlchemy", "Alembic", "PostgreSQL", "MySQL", "MongoDB", "Redis"]
     },
     {
       group: "Tools",
-      items: ["Git", "Docker", "Docker Compose", "Linux", "LaTeX", "Jupyter", "Colab &amp; Kaggle GPU"]
+      items: ["Git", "Docker", "Linux", "LaTeX", "Jupyter", "Colab &amp; Kaggle GPU"]
     }
   ],
 
