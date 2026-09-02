@@ -104,7 +104,12 @@
     var a = D.about;
     setHTML('#aboutLede', a.lede.map(function (p) { return '<p>' + p + '</p>'; }).join(''));
 
-    setHTML('#lookingForCard', '<p class="looking-note">' + a.lookingFor.note + '</p>');
+    setHTML('#lookingForCard',
+      '<p class="card-label">' + a.lookingFor.title + '</p>' +
+      '<ul class="looking-list">' +
+        a.lookingFor.items.map(function (i) { return '<li>' + i + '</li>'; }).join('') +
+      '</ul>'
+    );
   }
 
   /* --------------------------------------------------------- research -- */

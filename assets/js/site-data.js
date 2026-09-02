@@ -41,7 +41,11 @@ window.SITE_DATA = {
       "I'm a Computer Science and Engineering graduate from Rajshahi University of Engineering and Technology (RUET), Bangladesh. My research focuses on deep learning for medical image analysis and federated learning, with a growing interest in Vision-Language Models and NLP for low-resource languages."
     ],
     lookingFor: {
-      note: "If you supervise work in federated learning, medical image analysis, computer vision, or efficient deep architectures, and you think there might be a fit, kindly send me a message."
+      title: "What I am looking for",
+      items: [
+        "A PhD position starting Fall 2027 in Machine Learning, Deep Learning, Computer Vision, Federated Learning, or Medical Image Analysis.",
+        "An advisor working on federated or privacy-preserving learning, medical imaging, or efficient deep architectures."
+      ]
     }
   },
 
