@@ -131,14 +131,6 @@
     setHTML('#skillsGroups', D.skills.map(function (g) {
       return '<div class="skill-group"><h4>' + g.group + '</h4>' + tags(g.items) + '</div>';
     }).join(''));
-
-    setHTML('#courseGroups', D.coursework.map(function (g) {
-      return '<div class="course-group"><h4>' + g.group + '</h4>' + tags(g.items) + '</div>';
-    }).join(''));
-
-    setHTML('#langList', D.languages.map(function (l) {
-      return '<div class="lang-item"><strong>' + l.name + '</strong><span>' + l.level + '</span></div>';
-    }).join(''));
   }
 
   /* ----------------------------------------------------------- thesis -- */
@@ -264,23 +256,6 @@
              '</article>';
     }).join(''));
 
-    setHTML('#pipelineList', D.pipeline.map(function (p) {
-      return '<article class="pipeline-item" data-status="' + p.status + '">' +
-               '<span class="pipeline-marker" aria-hidden="true"></span>' +
-               '<div>' +
-                 '<p class="pipeline-status">' + p.statusLabel + '</p>' +
-                 '<h4>' + p.title + '</h4>' +
-                 '<p class="pipeline-role">' + p.role + '</p>' +
-                 '<p class="pipeline-body">' + p.body + '</p>' +
-                 '<div class="pipeline-foot">' +
-                   tags(p.tags) +
-                   (p.href ? '<a class="pipeline-link" href="' + p.href + '" target="_blank" rel="noopener">' +
-                             svg('link', 12) + 'Code</a>' : '') +
-                 '</div>' +
-               '</div>' +
-             '</article>';
-    }).join(''));
-
     var grid = $('#projectGrid');
     $('#projectFilters').addEventListener('click', function (e) {
       var btn = e.target.closest('.filter-btn');
@@ -380,26 +355,12 @@
     setHTML('#contactMeta',
       '<div class="meta-row"><span class="meta-k">Email</span>' +
         '<span class="meta-v"><a href="mailto:' + m.email + '">' + m.email + '</a></span></div>' +
-      '<div class="meta-row"><span class="meta-k">Based in</span>' +
-        '<span class="meta-v">' + m.location + '</span></div>' +
-      '<div class="meta-row"><span class="meta-k">Status</span>' +
-        '<span class="meta-v">' + m.status + '</span></div>' +
       '<div class="meta-row"><span class="meta-k">Elsewhere</span><span class="meta-v">' +
         D.links.filter(function (l) { return l.icon !== 'mail'; }).map(function (l) {
           return '<a href="' + l.href + '" target="_blank" rel="noopener">' + l.label + '</a>';
         }).join(' · ') +
       '</span></div>'
     );
-
-    setHTML('#refGrid', D.references.map(function (r) {
-      return '<div class="ref-card">' +
-               '<h4>' + r.name + '</h4>' +
-               '<p class="ref-title">' + r.title + '</p>' +
-               '<p class="ref-org">' + r.org + '</p>' +
-               '<a class="ref-mail" href="mailto:' + r.email + '">' + r.email + '</a>' +
-               (r.note ? '<br><span class="ref-note">' + r.note + '</span>' : '') +
-             '</div>';
-    }).join(''));
   }
 
   /* ------------------------------------------------------------ theme -- */

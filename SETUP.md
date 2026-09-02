@@ -87,13 +87,11 @@ What each key controls:
 | `thesis` | The featured thesis card — heading, summary, the four prose blocks, method tags |
 | `manuscriptsNote`, `manuscripts` | "Manuscripts in preparation" — citation-style entries |
 | `education`, `experience` | The two timelines under Journey |
-| `projects`, `projectFilters` | Project cards and their filter chips |
-| `pipeline` | "Where my research stands" — the honest research-status list, under Projects |
-| `coursework`, `skills`, `languages` | Coursework, skill groups, language list — under Technical skills |
+| `projects`, `projectFilters` | Project &amp; research cards and their filter chips (Research / AI-ML / Backend) |
+| `skills` | Skill groups under Technical skills |
 | `achievements` | Competitions and awards |
 | `certifications` | Certificate cards (click a thumbnail to enlarge) |
 | `news` | The dated "News & updates" list |
-| `references` | The two referee cards in the footer |
 
 ### A few conventions
 
