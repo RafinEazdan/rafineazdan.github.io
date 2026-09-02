@@ -187,6 +187,24 @@
     setHTML('#thesisCard', head + body + limits + foot);
   }
 
+  /* ------------------------------------------------------ manuscripts -- */
+
+  function renderManuscripts() {
+    setHTML('#manuscriptsNote', D.manuscriptsNote);
+
+    setHTML('#manuscriptList', D.manuscripts.map(function (m) {
+      return '<article class="manuscript-item">' +
+               '<div class="manuscript-year">' + m.year + '</div>' +
+               '<div>' +
+                 '<p class="manuscript-authors">' + m.authors + '</p>' +
+                 '<h3 class="manuscript-title">&ldquo;' + m.title + '.&rdquo;</h3>' +
+                 '<p class="manuscript-body">' + m.body + '</p>' +
+                 '<p class="manuscript-target">' + m.target + '</p>' +
+               '</div>' +
+             '</article>';
+    }).join(''));
+  }
+
   /* ---------------------------------------------------------- journey -- */
 
   function renderJourney() {
@@ -539,6 +557,7 @@
   renderAbout();
   renderResearch();
   renderThesis();
+  renderManuscripts();
   renderJourney();
   renderProjects();
   renderSkills();

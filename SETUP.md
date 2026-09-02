@@ -85,6 +85,7 @@ What each key controls:
 | `about` | The "Objective" narrative and the looking-for-a-supervisor card |
 | `researchInterests` | The six interest cards (`primary: true` marks one "Core") |
 | `thesis` | The featured thesis card — heading, summary, the four prose blocks, method tags |
+| `manuscriptsNote`, `manuscripts` | "Manuscripts in preparation" — citation-style entries |
 | `education`, `experience` | The two timelines under Journey |
 | `projects`, `projectFilters` | Project cards and their filter chips |
 | `pipeline` | "Where my research stands" — the honest research-status list, under Projects |

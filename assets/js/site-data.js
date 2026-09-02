@@ -129,6 +129,25 @@ window.SITE_DATA = {
     ],
   },
 
+  /* -------------------------------------------------------- manuscripts -- */
+  manuscriptsNote: "The following manuscripts are in preparation.",
+  manuscripts: [
+    {
+      authors: "Eazdan Mostafa Rafin and A. F. M. Minhazur Rahman",
+      title: "Lightweight Double-Attention U-Net for Federated Multi-Class Brain Tumor Segmentation",
+      year: "2026",
+      body: "Drawn from the completed undergraduate thesis: an 8.19 M-parameter federated segmentation model reaching 0.8819 mean region Dice on BraTS 2023, with cross-cohort validation on BraTS-Africa.",
+      target: "Target: a peer-reviewed venue in medical image analysis or applied deep learning."
+    },
+    {
+      authors: "Eazdan Mostafa Rafin and A. F. M. Minhazur Rahman",
+      title: "Guideline-Grounded VLM Fine-Tuning for Target-Aware Aggression Detection in Bengali Memes",
+      year: "2026",
+      body: "Guideline-grounded QLoRA fine-tuning of Qwen2-VL-2B for five-way target-aware aggression classification on Bengali memes, trained and evaluated on a single 16 GB GPU.",
+      target: "Target: a peer-reviewed conference."
+    }
+  ],
+
   /* ---------------------------------------------- research, where it stands -- */
 
 
