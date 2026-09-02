@@ -142,7 +142,7 @@ window.SITE_DATA = {
       org: "Rajshahi University of Engineering &amp; Technology (RUET)",
       place: "Rajshahi, Bangladesh",
       score: "CGPA 3.55 / 4.00",
-      score2: "3.73 average · final four semesters",
+      score2: "3.73 average · final two years",
       detail: "Thesis: <em>Lightweight Double-Attention U-Net for Federated Multi-Class Brain Tumor Segmentation</em> — a federated, 8.19 M-parameter segmentation model reaching 0.8819 mean region Dice on BraTS 2023."
     },
     {
@@ -328,12 +328,14 @@ window.SITE_DATA = {
   /* ---------------------------------------------------------------- news -- */
   news: [
     { date: "Aug 2026", body: "Preparing PhD applications, focused on federated learning, medical image analysis, and efficient deep architectures." },
-    { date: "11 Aug 2026", body: "Undergraduate result published — <strong>B.Sc. in Computer Science &amp; Engineering</strong> completed at RUET, CGPA 3.55 / 4.00, with a 3.73 average across the final four semesters." },
+    { date: "11 Aug 2026", body: "Undergraduate result published — <strong>B.Sc. in Computer Science &amp; Engineering</strong> completed at RUET, CGPA 3.55 / 4.00, with a 3.73 average across the final two years." },
+    { date: "8 Aug 2026", body: "Undergraduate thesis <strong>defended</strong>." },
     { date: "2026",     body: "Undergraduate thesis <strong>completed</strong> — 113 pages on DA-MDU-Net, a federated double-attention U-Net reaching <strong>0.8819 mean region Dice</strong> on BraTS 2023 at 8.19 M parameters. Manuscript in preparation." },
     { date: "2026",     body: "Placed in the <strong>Top 10</strong> at the HackSpark AI-API Hackathon, Technocracy Lite, RUET ECE." },
     { date: "2026",     body: "Ranked <strong>51 / 124</strong> in the DL Sprint 4.0 Bengali long-form speech recognition datathon at BUET CSE Fest." },
     { date: "2025",     body: "Ranked <strong>525 / 4,329 (top 13%)</strong> in Kaggle Playground Series S5E7." },
     { date: "2025",     body: "Began undergraduate thesis on federated brain tumour segmentation at RUET." },
-    { date: "Mar 2025", body: "Completed industrial training at <strong>Vivasoft Limited</strong>, building CV Insighter inside a professional code-review process." }
+    { date: "Mar 2025", body: "Completed industrial training at <strong>Vivasoft Limited</strong>, building CV Insighter inside a professional code-review process." },
+    { date: "5 Mar 2022", body: "Classes began for the <strong>B.Sc. in Computer Science &amp; Engineering</strong> at RUET." }
   ]
 };

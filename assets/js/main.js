@@ -277,13 +277,13 @@
                '<div>' +
                  '<h3>' + a.title + '</h3>' +
                  '<p class="award-body">' + a.body + '</p>' +
+               '</div>' +
+               '<div class="award-rank">' +
+                 (a.rank ? '<span class="rank-v">' + a.rank + '</span>' : '') +
+                 (a.note ? '<span class="rank-n">' + a.note + '</span>' : '') +
                  (a.href ? '<a class="award-link" href="' + a.href + '" target="_blank" rel="noopener">' +
                            svg('link', 11) + 'View</a>' : '') +
                '</div>' +
-               (a.rank ? '<div class="award-rank">' +
-                           '<span class="rank-v">' + a.rank + '</span>' +
-                           (a.note ? '<span class="rank-n">' + a.note + '</span>' : '') +
-                         '</div>' : '<div></div>') +
              '</article>';
     }).join(''));
 
@@ -344,9 +344,8 @@
 
     setHTML('#footerLinks', items.map(function (l) {
       var newTab = l.newTab || /^https?:/.test(l.href);
-      return '<a class="footer-icon-link" href="' + l.href + '"' + (newTab ? ' target="_blank" rel="noopener"' : '') +
-               ' aria-label="' + l.label + '" title="' + l.label + '">' +
-               svg(l.icon, 18) +
+      return '<a class="footer-icon-link" href="' + l.href + '"' + (newTab ? ' target="_blank" rel="noopener"' : '') + '>' +
+               svg(l.icon, 16) + '<span>' + l.label + '</span>' +
              '</a>';
     }).join(''));
   }
