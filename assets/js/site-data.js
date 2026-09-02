@@ -19,7 +19,7 @@ window.SITE_DATA = {
     role: "B.Sc. in Computer Science &amp; Engineering — Rajshahi University of Engineering &amp; Technology",
     status: "Applying to PhD programs · Fall 2027 intake",
     tagline:
-      "I'm a Computer Science and Engineering graduate from Rajshahi University of Engineering and Technology (RUET), Bangladesh. My research focuses on deep learning for medical image analysis and federated learning, with a growing interest in vision-language models and NLP for low-resource languages. I'm currently seeking MS/PhD opportunities. ",
+      "Recent CSE gradute working at the intersection of deep learning theory and the systems that make it run efficiently and reliably in the real world.",
     location: "Dhaka, Bangladesh",
     email: "eazdan.rafin@gmail.com",
     cvPath: "assets/cv/Eazdan_Mostafa_Rafin_CV.pdf",
@@ -46,37 +46,36 @@ window.SITE_DATA = {
   /* --------------------------------------------------------------- about -- */
   about: {
     lede: [
-      "I am a Computer Science and Engineering graduate of RUET, and I want to spend my career as a researcher in machine learning specially in Federated Learning and Deep Learning. ",
-      "My undergraduate thesis addressed this directly: DA-MDU-Net, a double-attention multiscale dense U-Net trained federated across three client sites on BraTS 2023, reaching 0.8819 mean region Dice at a 91.6% parameter cut with no measurable accuracy cost. I am now applying to PhD programs to pursue federated learning, medical image analysis, and efficient deep architectures with the depth a doctoral program allows."
+      "I'm a Computer Science and Engineering graduate from Rajshahi University of Engineering and Technology (RUET), Bangladesh. My research focuses on deep learning for medical image analysis and federated learning, with a growing interest in Vision-Language Models and NLP for low-resource languages."
     ],
     lookingFor: {
       title: "What I am looking for",
       items: [
         "A PhD position starting Fall 2027 in Machine Learning, Deep Learning, Computer Vision, Federated Learning, or Medical Image Analysis.",
         "An advisor working on federated or privacy-preserving learning, medical imaging, or efficient deep architectures."
-      ],
+      ]
     }
   },
 
   /* --------------------------------------------------- research interests -- */
   researchInterests: [
     {
-      title: "Federated &amp; Privacy-Preserving Learning",
+      title: "Federated Learning",
       icon: "network",
       primary: true,
       body: "Training useful models across institutions that cannot pool their data. Non-IID client distributions, aggregation strategies, communication cost, and the accuracy a federated model gives up against a centralised one."
-    },
-    {
-      title: "Medical Image Analysis",
-      icon: "scan",
-      primary: true,
-      body: "Multi-modal MRI, tumour and lesion segmentation, and the class imbalance that makes small clinical structures so easy to miss and so costly to miss."
     },
     {
       title: "Computer Vision",
       icon: "eye",
       primary: true,
       body: "Semantic segmentation, image classification, and attention mechanisms — particularly how attention can be made to earn its parameter budget rather than simply consume it."
+    },
+    {
+      title: "Medical Image Analysis",
+      icon: "scan",
+      primary: true,
+      body: "Multi-modal MRI, tumour and lesion segmentation, and the class imbalance that makes small clinical structures so easy to miss and so costly to miss."
     },
     {
       title: "Lightweight &amp; Efficient Architectures",
@@ -101,19 +100,19 @@ window.SITE_DATA = {
     title: "Lightweight Double-Attention U-Net for Federated Multi-Class Brain Tumor Segmentation",
     period: "2025 – 2026",
     supervisor: "A. F. M. Minhazur Rahman, Assistant Professor, Dept. of CSE, RUET",
-    status: "Complete · 113-page thesis",
+    status: "Complete · 113-page thesis book",
     summary:
       "DA-MDU-Net — a double-attention multiscale dense U-Net rebuilt down to 8.19 M parameters and trained federated across three client sites on BraTS 2023, so that no scan leaves the hospital that produced it. Two results carry the thesis: removing 91.6% of the parameters cost nothing measurable, and federation cost about half a point of Dice.",
     metrics: [
       { value: "0.8819", label: "mean region Dice, 80 held-out cases" },
-      { value: "8.19 M", label: "parameters — 91.6% fewer, no accuracy cost" },
-      { value: "31.2 MB", label: "per client per round, against 373.8 MB" },
+      { value: "8.19 M", label: "parameters" },
+      { value: "31.2 MB", label: "per client per round" },
       { value: "0.7533", label: "Dice on an unseen African cohort, no fine-tuning" }
     ],
     blocks: [
       {
         heading: "The problem",
-        body: "Multi-class brain tumour segmentation — separating enhancing tumour, peritumoral oedema and the necrotic core — is the kind of task deep learning should already have solved. It has not, in the places that matter. Annotated MRI is private patient data, so most hospitals will not pool it and each site trains on the small archive it holds. Federated work exists, but it largely relies on heavy models and does not take seriously the network and compute budgets of the hospitals it is supposed to serve."
+        body: "Multi-class brain tumour segmentation - separating enhancing tumour, peritumoral edema and the necrotic core — is the kind of task deep learning should already have solved. It has not, in the places that matter. Annotated MRI is private patient data, so most hospitals will not pool it and each site trains on the small archive it holds. Federated work exists, but it largely relies on heavy models and does not take seriously the network and compute budgets of the hospitals it is supposed to serve."
       },
       {
         heading: "The architecture",
@@ -136,14 +135,10 @@ window.SITE_DATA = {
       "Attention gates", "Dense blocks", "Group normalisation",
       "Dice + focal + boundary loss", "PyTorch"
     ],
-    repo: {
-      note: "Public repository: the DA-MDU-Net architecture, centralised, on BraTS 2020."
-    }
   },
 
   /* ---------------------------------------------- research, where it stands -- */
-  pipelineNote:
-    "Where each piece of work actually stands, rather than a tidied-up version of it.",
+
 
   pipeline: [
     {
@@ -204,7 +199,7 @@ window.SITE_DATA = {
     {
       period: "2016 – 2018",
       degree: "Secondary School Certificate (Science)",
-      org: "Birsreshtha Noor Mohammad Public College",
+      org: "Birshreshtha Noor Mohammad Public College",
       place: "Dhaka, Bangladesh",
       score: "GPA 5.00 / 5.00"
     }
@@ -278,33 +273,6 @@ window.SITE_DATA = {
   projectFilters: ["All", "Research", "AI / ML", "Backend"],
 
   projects: [
-    {
-      category: "Research",
-      title: "DA-MDU-Net — Brain MRI Segmentation",
-      featured: true,
-      body: "The architecture behind my thesis, in its centralised form: a 2D multi-class tumour segmentation pipeline over T1ce, T2 and FLAIR on BraTS 2020. Dense encoder blocks, double attention on multi-scale bottleneck features, and attention gates on every skip connection. The thesis then federates it and factorises it down to 8.19 M parameters.",
-      metrics: [{ value: "3", label: "tumour sub-regions" }, { value: "2D", label: "slice-wise over 3D volumes" }],
-      tags: ["PyTorch", "Medical imaging", "Segmentation", "Attention"],
-      links: [{ label: "Repository", href: "https://github.com/RafinEazdan/Brain-MRI-Segmentation-using-Double-Attention-based-Multiscale-Dense-U-Net" }]
-    },
-    {
-      category: "AI / ML",
-      title: "Vision-Language Fine-Tuning for Bangla Meme Classification",
-      featured: true,
-      body: "Fine-tuned Qwen2-VL-2B-Instruct with 4-bit QLoRA on a single 16 GB Kaggle T4 to sort Bangla memes into four categories. I prepared, labelled and split the dataset myself, and chose the two-epoch checkpoint through per-class error analysis — reaching 82.07% accuracy and 83.24% macro accuracy on a 290-image held-out split.",
-      metrics: [{ value: "83.24%", label: "macro accuracy" }, { value: "16 GB", label: "single-GPU budget" }],
-      tags: ["Unsloth", "PyTorch", "TRL", "PEFT", "QLoRA"],
-      links: [{ label: "Repository", href: "https://github.com/RafinEazdan/vlm-finetuning-bangla-meme-classification" }]
-    },
-    {
-      category: "AI / ML",
-      title: "Dengue Prediction from Hematological Data",
-      featured: true,
-      body: "A full clinical ML pipeline on a 1,523-patient blood dataset: outlier removal, SMOTE for imbalance, and consensus feature selection across five methods, then a comparison from logistic regression through gradient-boosted trees under stratified cross-validation. LightGBM won at 76.57% accuracy and 0.71 ROC-AUC; platelet and lymphocyte counts were the strongest predictors.",
-      metrics: [{ value: "0.71", label: "ROC-AUC" }, { value: "1,523", label: "patient records" }],
-      tags: ["scikit-learn", "LightGBM", "SMOTE", "Clinical data"],
-      links: [{ label: "Repository", href: "https://github.com/RafinEazdan/Machine-Learning-Based-Dengue-Prediction-from-Hematological-Data" }]
-    },
     {
       category: "AI / ML",
       title: "RAG Document Question-Answering API",
@@ -414,9 +382,7 @@ window.SITE_DATA = {
       "Digital Image Processing",
       "Software Engineering",
       "Associated laboratory courses"
-    ],
-    supervision:
-      "Longer term I would like to supervise undergraduate project and thesis work in medical image analysis, efficient deep learning architectures, and applied machine learning on clinical and low-resource-language data."
+    ]
   },
 
   /* ---------------------------------------------------------------- news -- */
