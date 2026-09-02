@@ -38,7 +38,7 @@ window.SITE_DATA = {
   /* --------------------------------------------------------------- about -- */
   about: {
     lede: [
-      "I'm a Computer Science and Engineering graduate from Rajshahi University of Engineering and Technology (RUET), Bangladesh. My research focuses on deep learning for medical image analysis and federated learning, with a growing interest in Vision-Language Models and NLP for low-resource languages."
+      "I'm a Computer Science and Engineering graduate from Rajshahi University of Engineering and Technology (RUET), Bangladesh. My research focuses on deep learning for medical image analysis and federated learning, with a growing interest in Vision-Language Models."
     ],
     lookingFor: {
       title: "What I am looking for",
