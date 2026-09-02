@@ -17,14 +17,13 @@ window.SITE_DATA = {
     shortName: "Eazdan Rafin",
     initials: "ER",
     role: "B.Sc. in Computer Science &amp; Engineering — Rajshahi University of Engineering &amp; Technology",
-    status: "Applying to PhD programs · Fall 2027 intake",
+    status: "Applying to PhD",
     tagline:
       "CSE graduate working at the intersection of deep learning theory and the constraints - compute, privacy, bandwidth - that decide whether it actually works in the real world. ",
     location: "Dhaka, Bangladesh",
     email: "eazdan.rafin@gmail.com",
     cvPath: "assets/cv/Eazdan_Mostafa_Rafin_CV.pdf",
-    photo: "assets/img/profile/rafin.jpg",
-    lastUpdated: "August 2026"
+    photo: "assets/img/profile/rafin.jpg"
   },
 
   /* --------------------------------------------------------------- links -- */
@@ -43,7 +42,7 @@ window.SITE_DATA = {
     lookingFor: {
       title: "What I am looking for",
       items: [
-        "A PhD position starting Fall 2027 in Machine Learning, Deep Learning, Computer Vision, Federated Learning, or Medical Image Analysis.",
+        "A PhD position in Machine Learning, Deep Learning, Computer Vision, Federated Learning, or Medical Image Analysis.",
         "An advisor working on federated or privacy-preserving learning, medical imaging, or efficient deep architectures."
       ]
     }
@@ -53,36 +52,23 @@ window.SITE_DATA = {
   researchInterests: [
     {
       title: "Federated Learning",
-      icon: "network",
-      primary: true,
       body: "Training useful models across institutions that cannot pool their data."
     },
     {
       title: "Computer Vision",
-      icon: "eye",
-      primary: true,
       body: "Semantic segmentation, classification, and attention mechanisms that earn their parameter budget."
     },
     {
       title: "Medical Image Analysis",
-      icon: "scan",
-      primary: true,
       body: "Multi-modal MRI and tumour segmentation under severe class imbalance."
     },
     {
       title: "Lightweight &amp; Efficient Architectures",
-      icon: "chip",
       body: "Parameter-efficient design for deployment outside well-funded labs."
     },
     {
       title: "Vision-Language &amp; Multimodal Models",
-      icon: "layers",
       body: "Multimodal classification and fine-tuning under tight memory budgets."
-    },
-    {
-      title: "NLP for Low-Resource Languages",
-      icon: "chat",
-      body: "Bangla NLP and retrieval-augmented generation grounded in evidence."
     }
   ],
 
@@ -94,7 +80,7 @@ window.SITE_DATA = {
     supervisor: "A. F. M. Minhazur Rahman, Assistant Professor, Dept. of CSE, RUET",
     status: "Complete · 113-page thesis book",
     summary:
-      "DA-MDU-Net — a double-attention U-Net cut to 8.19 M parameters, trained federated across three sites on BraTS 2023. The 91.6% parameter cut cost nothing measurable; federation cost half a point of Dice.",
+      "DA-MDU-Net — a double-attention U-Net cut to 8.19 M parameters, federated across three sites on BraTS 2023.",
     metrics: [
       { value: "0.8819", label: "mean region Dice, 80 held-out cases" },
       { value: "8.19 M", label: "parameters" },
@@ -104,23 +90,23 @@ window.SITE_DATA = {
     blocks: [
       {
         heading: "The problem",
-        body: "Annotated brain MRI is private patient data, so hospitals will not pool it and each site trains on what it holds. Existing federated segmentation work relies on heavy models that ignore hospitals' network and compute budgets."
+        body: "Annotated brain MRI is private, so hospitals can't pool it. Existing federated work ignores hospitals' compute and network limits."
       },
       {
         heading: "The architecture",
-        body: "DA-MDU-Net factorises a double-attention U-Net's arithmetic: dense encoder blocks, multi-scale attention on bottleneck features, attention gates on every skip connection, and depthwise separable convolutions throughout. Sharing one multi-scale extractor across the query, key and value branches cuts both attention modules over twenty-fold."
+        body: "Dense encoder blocks, multi-scale attention, attention gates, depthwise separable convolutions — one shared extractor across Q/K/V cuts attention over twenty-fold."
       },
       {
         heading: "The federated system",
-        body: "802 BraTS 2023 glioma cases, partitioned by whole patient across three clients, trained for twenty rounds under sample-weighted FedAvg with group normalisation. The loss combines Dice, focal, boundary and region terms to protect small sub-regions, and every test slice is scored, including tumour-free ones."
+        body: "802 BraTS 2023 cases, three clients, twenty FedAvg rounds with group normalisation. A Dice+focal+boundary+region loss protects small sub-regions."
       },
       {
         heading: "What it cost, and where it holds",
-        body: "Federation cost 0.55 points of Dice against centralised training at a matched budget. Against the full-capacity 97.98 M re-implementation, the lightweight redesign cost nothing detectable while cutting a full run's traffic from 43.80 GB to 3.66 GB. Without fine-tuning on 94 BraTS-Africa cases, it holds 0.7533 Dice — missing tumour rather than inventing it."
+        body: "Federation cost 0.55 Dice points at a matched budget, with nothing detectable lost to the lightweight redesign. Holds 0.7533 Dice on unseen BraTS-Africa cases with no fine-tuning."
       }
     ],
     limitations:
-      "Stated limits: one seed per arm, an IID rather than site-based partition, a 2D formulation, and communication cost computed rather than measured — motivating non-IID partitions, differential privacy, and 3D next.",
+      "Limits: one seed, IID partition, 2D only, computed not measured cost. Next: non-IID, differential privacy, 3D.",
     methods: [
       "BraTS 2023", "BraTS-Africa", "Multi-modal MRI", "Sample-weighted FedAvg",
       "3 clients &times; 20 rounds", "Depthwise separable convolutions", "Double attention",
@@ -341,7 +327,7 @@ window.SITE_DATA = {
 
   /* ---------------------------------------------------------------- news -- */
   news: [
-    { date: "Aug 2026", body: "Preparing PhD applications for the <strong>Fall 2027</strong> intake, focused on federated learning, medical image analysis, and efficient deep architectures." },
+    { date: "Aug 2026", body: "Preparing PhD applications, focused on federated learning, medical image analysis, and efficient deep architectures." },
     { date: "11 Aug 2026", body: "Undergraduate result published — <strong>B.Sc. in Computer Science &amp; Engineering</strong> completed at RUET, CGPA 3.55 / 4.00, with a 3.73 average across the final four semesters." },
     { date: "2026",     body: "Undergraduate thesis <strong>completed</strong> — 113 pages on DA-MDU-Net, a federated double-attention U-Net reaching <strong>0.8819 mean region Dice</strong> on BraTS 2023 at 8.19 M parameters. Manuscript in preparation." },
     { date: "2026",     body: "Placed in the <strong>Top 10</strong> at the HackSpark AI-API Hackathon, Technocracy Lite, RUET ECE." },

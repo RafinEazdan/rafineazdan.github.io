@@ -87,7 +87,6 @@
     document.title = m.name + ' — Federated Learning & Medical Image Analysis';
 
     setHTML('#year', String(new Date().getFullYear()));
-    setHTML('#lastUpdated', 'Last updated ' + m.lastUpdated);
 
     /* hero call-to-action buttons */
     var gh = D.links.filter(function (l) { return l.icon === 'github'; })[0];
@@ -116,12 +115,7 @@
 
   function renderResearch() {
     setHTML('#interestGrid', D.researchInterests.map(function (r) {
-      return '<article class="interest-card' + (r.primary ? ' is-primary' : '') + '">' +
-               (r.primary ? '<span class="interest-flag">Core</span>' : '') +
-               '<div class="interest-icon">' + svg(r.icon, 19) + '</div>' +
-               '<h3>' + r.title + '</h3>' +
-               '<p>' + r.body + '</p>' +
-             '</article>';
+      return '<li class="interest-item"><strong>' + r.title + '</strong> — ' + r.body + '</li>';
     }).join(''));
   }
 
@@ -346,21 +340,15 @@
 
   function renderContact() {
     var m = D.meta;
+    var items = D.links.concat([{ label: 'CV', href: m.cvPath, icon: 'doc', newTab: true }]);
 
-    setHTML('#contactActions',
-      '<a class="btn btn-primary" href="mailto:' + m.email + '">' + svg('mail', 15) + m.email + '</a>' +
-      '<a class="btn btn-outline" href="' + m.cvPath + '" target="_blank" rel="noopener">' + svg('doc', 15) + 'Curriculum vitae</a>'
-    );
-
-    setHTML('#contactMeta',
-      '<div class="meta-row"><span class="meta-k">Email</span>' +
-        '<span class="meta-v"><a href="mailto:' + m.email + '">' + m.email + '</a></span></div>' +
-      '<div class="meta-row"><span class="meta-k">Elsewhere</span><span class="meta-v">' +
-        D.links.filter(function (l) { return l.icon !== 'mail'; }).map(function (l) {
-          return '<a href="' + l.href + '" target="_blank" rel="noopener">' + l.label + '</a>';
-        }).join(' · ') +
-      '</span></div>'
-    );
+    setHTML('#footerLinks', items.map(function (l) {
+      var newTab = l.newTab || /^https?:/.test(l.href);
+      return '<a class="footer-icon-link" href="' + l.href + '"' + (newTab ? ' target="_blank" rel="noopener"' : '') +
+               ' aria-label="' + l.label + '" title="' + l.label + '">' +
+               svg(l.icon, 18) +
+             '</a>';
+    }).join(''));
   }
 
   /* ------------------------------------------------------------ theme -- */
