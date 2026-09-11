@@ -72,6 +72,9 @@
   function renderMeta() {
     var m = D.meta;
     setHTML('#heroStatus', m.status);
+    /* no status line to show — drop the eyebrow rather than leave a bare dot */
+    var eyebrow = $('#heroStatus') && $('#heroStatus').closest('.hero-eyebrow');
+    if (eyebrow) eyebrow.hidden = !m.status;
     setHTML('#heroName', m.name);
     setHTML('#heroRole', m.role);
     setHTML('#heroTagline', m.tagline);
@@ -212,9 +215,11 @@
                '<h4 class="tl-title">' + x.role + '</h4>' +
                '<p class="tl-org">' + x.org + '</p>' +
                '<p class="tl-place">' + x.place + '</p>' +
-               '<ul class="tl-bullets">' +
-                 x.bullets.map(function (b) { return '<li>' + b + '</li>'; }).join('') +
-               '</ul>' +
+               (x.bullets && x.bullets.length
+                 ? '<ul class="tl-bullets">' +
+                     x.bullets.map(function (b) { return '<li>' + b + '</li>'; }).join('') +
+                   '</ul>'
+                 : '') +
                (x.href ? '<a class="tl-link" href="' + x.href + '" target="_blank" rel="noopener">' +
                          svg('github', 12) + 'Repository</a>' : '') +
              '</div>';

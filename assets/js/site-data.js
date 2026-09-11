@@ -17,7 +17,7 @@ window.SITE_DATA = {
     shortName: "Eazdan Rafin",
     initials: "ER",
     role: "B.Sc. in Computer Science &amp; Engineering — Rajshahi University of Engineering &amp; Technology",
-    status: "Applying to PhD",
+    status: "",
     tagline:
       "CSE graduate working at the intersection of deep learning theory and the constraints - compute, privacy, bandwidth - that decide whether it actually works in the real world. ",
     location: "Dhaka, Bangladesh",
@@ -163,6 +163,13 @@ window.SITE_DATA = {
 
   /* ---------------------------------------------------------- experience -- */
   experience: [
+    {
+      period: "September 2026 \u2013 Present",
+      role: "Lecturer, Department of CSE",
+      org: "Stamford University Bangladesh",
+      place: "Dhaka, Bangladesh",
+      bullets: []
+    },
     {
       period: "March 2025",
       role: "Industrial Trainee",
@@ -327,6 +334,7 @@ window.SITE_DATA = {
 
   /* ---------------------------------------------------------------- news -- */
   news: [
+    { date: "10 Sept 2026", body: "Joined <strong>Stamford University Bangladesh</strong> as a <strong>Lecturer</strong> in the Department of Computer Science &amp; Engineering." },
     { date: "Aug 2026", body: "Preparing PhD applications, focused on federated learning, medical image analysis, and efficient deep architectures." },
     { date: "11 Aug 2026", body: "Undergraduate result published — <strong>B.Sc. in Computer Science &amp; Engineering</strong> completed at RUET, CGPA 3.55 / 4.00, with a 3.73 average across the final two years." },
     { date: "8 Aug 2026", body: "Undergraduate thesis <strong>defended</strong>." },
