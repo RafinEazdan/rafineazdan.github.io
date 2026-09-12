@@ -16,8 +16,7 @@ window.SITE_DATA = {
     name: "Eazdan Mostafa Rafin",
     shortName: "Eazdan Rafin",
     initials: "ER",
-    role: "B.Sc. in Computer Science &amp; Engineering — Rajshahi University of Engineering &amp; Technology",
-    status: "",
+    role: "Lecturer, Department of CSE — Stamford University Bangladesh<br>B.Sc. in Computer Science &amp; Engineering — Rajshahi University of Engineering &amp; Technology",
     tagline:
       "CSE graduate working at the intersection of deep learning theory and the constraints - compute, privacy, bandwidth - that decide whether it actually works in the real world. ",
     location: "Dhaka, Bangladesh",

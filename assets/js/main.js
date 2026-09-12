@@ -71,18 +71,13 @@
 
   function renderMeta() {
     var m = D.meta;
-    setHTML('#heroStatus', m.status);
-    /* no status line to show — drop the eyebrow rather than leave a bare dot */
-    var eyebrow = $('#heroStatus') && $('#heroStatus').closest('.hero-eyebrow');
-    if (eyebrow) eyebrow.hidden = !m.status;
     setHTML('#heroName', m.name);
     setHTML('#heroRole', m.role);
     setHTML('#heroTagline', m.tagline);
     setHTML('#brandCrest', m.initials);
     setHTML('#brandName', m.name);
 
-    var cv = $('#navCvLink');
-    if (cv) cv.href = m.cvPath;
+    $$('#navCvLink, #drawerCvLink').forEach(function (a) { a.href = m.cvPath; });
 
     var photo = $('#heroPhoto');
     if (photo) { photo.src = m.photo; photo.alt = m.name; }
@@ -405,8 +400,9 @@
     var toTop    = $('#backToTop');
     var sections = $$('main section[id], header[id]');
     var navMap   = {};
-    $$('#navLinks a[href^="#"]').forEach(function (a) {
-      navMap[a.getAttribute('href').slice(1)] = a;
+    $$('#navLinks a[href^="#"], #drawerLinks a[href^="#"]').forEach(function (a) {
+      var id = a.getAttribute('href').slice(1);
+      (navMap[id] = navMap[id] || []).push(a);
     });
 
     var ticking = false;
@@ -427,7 +423,7 @@
           if (s.offsetTop <= probe) current = s.id;
         });
         Object.keys(navMap).forEach(function (id) {
-          navMap[id].classList.toggle('is-active', id === current);
+          navMap[id].forEach(function (a) { a.classList.toggle('is-active', id === current); });
         });
 
         ticking = false;
@@ -443,6 +439,61 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
+  }
+
+  /* ----------------------------------------------------------- drawer -- */
+
+  /* Side slider holding every section, including those kept out of the
+     header nav. The tab hides itself while the panel is open. */
+  function initDrawer() {
+    var tab    = $('#drawerTab');
+    var panel  = $('#sectionDrawer');
+    var scrim  = $('#drawerScrim');
+    var close  = $('#drawerClose');
+    if (!tab || !panel || !scrim) return;
+
+    var lastFocus = null;
+
+    function open() {
+      lastFocus = document.activeElement;
+      scrim.hidden = false;
+      /* next frame, so the transition has a start value to animate from */
+      window.requestAnimationFrame(function () {
+        scrim.classList.add('is-open');
+        panel.classList.add('is-open');
+      });
+      tab.classList.add('is-hidden');
+      tab.setAttribute('aria-expanded', 'true');
+      panel.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('drawer-open');
+      if (close) close.focus();
+    }
+
+    function shut() {
+      if (!panel.classList.contains('is-open')) return;
+      panel.classList.remove('is-open');
+      scrim.classList.remove('is-open');
+      tab.classList.remove('is-hidden');
+      tab.setAttribute('aria-expanded', 'false');
+      panel.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('drawer-open');
+      window.setTimeout(function () {
+        if (!panel.classList.contains('is-open')) scrim.hidden = true;
+      }, 340);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    tab.addEventListener('click', open);
+    scrim.addEventListener('click', shut);
+    if (close) close.addEventListener('click', shut);
+
+    panel.addEventListener('click', function (e) {
+      if (e.target.closest('a')) shut();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') shut();
+    });
   }
 
   /* ----------------------------------------------------------- reveal -- */
@@ -521,6 +572,7 @@
 
   initTheme();
   initNav();
+  initDrawer();
   initReveal();
   initLightbox();
 })();

@@ -91,12 +91,10 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
-      <li><a href="#thesis">Thesis</a></li>
-      <li><a href="#manuscripts">Publications</a></li>
-      <li><a href="#journey">Journey</a></li>
+      <li><a href="#journey">Education &amp; Experience</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#news">News</a></li>
       <li><a href="#contact">Contact</a></li>
       <li class="nav-cv">
         <a href="#" id="navCvLink" class="nav-cv-link" target="_blank" rel="noopener">
@@ -125,7 +123,6 @@
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="container hero-inner">
     <div class="hero-text">
-      <p class="hero-eyebrow"><span class="dot"></span><span id="heroStatus"></span></p>
       <h1 id="heroName"></h1>
       <p class="hero-role" id="heroRole"></p>
       <p class="hero-tagline" id="heroTagline"></p>
@@ -292,6 +289,43 @@
     </div>
   </div>
 </footer>
+
+<!-- ════════════════════════════════════════════════════ SECTION DRAWER ═══ -->
+<button class="drawer-tab" id="drawerTab" aria-label="Open section index"
+        aria-expanded="false" aria-controls="sectionDrawer">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  <span class="drawer-tab-text">Sections</span>
+</button>
+
+<div class="drawer-scrim" id="drawerScrim" hidden></div>
+
+<aside class="section-drawer" id="sectionDrawer" aria-label="All sections" aria-hidden="true">
+  <div class="drawer-head">
+    <p class="drawer-title">All sections</p>
+    <button class="icon-btn" id="drawerClose" aria-label="Close section index">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <nav class="drawer-links" id="drawerLinks">
+    <a href="#home"><span class="drawer-num">01</span>Home</a>
+    <a href="#about"><span class="drawer-num">02</span>About</a>
+    <a href="#research"><span class="drawer-num">03</span>Research interests</a>
+    <a href="#thesis"><span class="drawer-num">04</span>Thesis</a>
+    <a href="#manuscripts"><span class="drawer-num">05</span>Publications</a>
+    <a href="#journey"><span class="drawer-num">06</span>Education &amp; experience</a>
+    <a href="#projects"><span class="drawer-num">07</span>Projects</a>
+    <a href="#skills"><span class="drawer-num">08</span>Skills</a>
+    <a href="#achievements"><span class="drawer-num">09</span>Achievements</a>
+    <a href="#news"><span class="drawer-num">10</span>News &amp; updates</a>
+    <a href="#contact"><span class="drawer-num">11</span>Contact</a>
+  </nav>
+
+  <a class="drawer-cv" id="drawerCvLink" href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg>
+    Download CV
+  </a>
+</aside>
 
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
