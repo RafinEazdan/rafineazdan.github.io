@@ -72,7 +72,12 @@
   function renderMeta() {
     var m = D.meta;
     setHTML('#heroName', m.name);
-    setHTML('#heroRole', m.role);
+    /* A list of roles renders as bullets; a plain string stays one line. */
+    setHTML('#heroRole', Array.isArray(m.role)
+      ? '<ul class="hero-role-list">' +
+          m.role.map(function (r) { return '<li>' + r + '</li>'; }).join('') +
+        '</ul>'
+      : m.role);
     setHTML('#heroTagline', m.tagline);
     setHTML('#brandCrest', m.initials);
     setHTML('#brandName', m.name);
@@ -216,7 +221,8 @@
                    '</ul>'
                  : '') +
                (x.href ? '<a class="tl-link" href="' + x.href + '" target="_blank" rel="noopener">' +
-                         svg('github', 12) + 'Repository</a>' : '') +
+                         svg(x.linkIcon || 'github', 12) +
+                         (x.linkLabel || 'Repository') + '</a>' : '') +
              '</div>';
     }).join(''));
   }

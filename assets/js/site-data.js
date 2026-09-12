@@ -16,7 +16,11 @@ window.SITE_DATA = {
     name: "Eazdan Mostafa Rafin",
     shortName: "Eazdan Rafin",
     initials: "ER",
-    role: "Lecturer, Department of CSE — Stamford University Bangladesh<br>B.Sc. in Computer Science &amp; Engineering — Rajshahi University of Engineering &amp; Technology",
+    /* One line per bullet in the hero. */
+    role: [
+      "Lecturer, Department of CSE — Stamford University Bangladesh",
+      "B.Sc. in Computer Science &amp; Engineering — Rajshahi University of Engineering &amp; Technology"
+    ],
     tagline:
       "CSE graduate working at the intersection of deep learning theory and the constraints - compute, privacy, bandwidth - that decide whether it actually works in the real world. ",
     location: "Dhaka, Bangladesh",
@@ -30,6 +34,7 @@ window.SITE_DATA = {
     { label: "GitHub",   href: "https://github.com/RafinEazdan",                     icon: "github" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/eazdan-mostafa-rafin/",  icon: "linkedin" },
     { label: "Kaggle",   href: "https://www.kaggle.com/eazdanmostafarafin",          icon: "kaggle" },
+    { label: "University profile", href: "https://www.stamforduniversity.edu.bd/index.php/stamford/profile_details/ER%202609%2002486", icon: "link" },
     { label: "Email",    href: "mailto:eazdan.rafin@gmail.com",                      icon: "mail" }
   ],
 
@@ -167,7 +172,10 @@ window.SITE_DATA = {
       role: "Lecturer, Department of CSE",
       org: "Stamford University Bangladesh",
       place: "Dhaka, Bangladesh",
-      bullets: []
+      bullets: [],
+      href: "https://www.stamforduniversity.edu.bd/index.php/stamford/profile_details/ER%202609%2002486",
+      linkLabel: "Faculty profile",
+      linkIcon: "link"
     },
     {
       period: "March 2025",

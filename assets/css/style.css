@@ -491,7 +491,21 @@ section { padding: clamp(36px, 4.5vw, 56px) 0; }
   font-weight: 500;
   color: var(--ink);
   margin-bottom: 18px;
-  max-width: 40ch;
+  max-width: 44ch;
+}
+.hero-role-list { list-style: none; display: grid; gap: 5px; }
+.hero-role-list li {
+  position: relative;
+  padding-left: 17px;
+  line-height: 1.45;
+}
+.hero-role-list li::before {
+  content: "";
+  position: absolute;
+  left: 1px; top: .58em;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .hero-tagline {
